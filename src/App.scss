@@ -1,0 +1,163 @@
+.home-section {
+  background: #FCF6EF;
+}
+
+.title {
+  color: #0D0B00;
+  font-weight: 700;
+  font-size: 60px;
+  font-family: 'Urbanist';
+}
+
+.dock {
+  font-family: 'LcdSolid';
+  font-weight: 400;
+  font-size: 16px;
+  color: #0D0B00;
+  border: 1px dashed #383838;
+  border-radius: 32px;
+  padding: 12px 16px;
+  width: fit-content;
+}
+
+.sub-title {
+  color: #383838;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.collaboration-section {
+  & .title {
+    font-family: 'LcdSolid';
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #FF7400;
+  }
+
+  & .sub-title {
+    font-size: 56px;
+    font-weight: 700;
+    font-family: 'Urbanist';
+  }
+}
+
+.points {
+  .number {
+    font-family: 'LcdSolid';
+    font-weight: 400;
+    font-size: 63.67px;
+    color: #FF7400;
+
+  }
+
+  .title {
+    font-family: 'LcdSolid';
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 24px;
+    color: #101010;
+  }
+
+  .sub-title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.our-mission {
+  background-color: #FCF6EF;
+  padding: 112px 64px 112px 54px;
+
+  .title {
+    font-family: 'LcdSolid';
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 100px;
+    background: linear-gradient(90deg, #FF7400, #FFF3E0);
+    color: transparent;
+    background-clip: text;
+  }
+}
+
+.service-offered {
+  background: #0D0B00;
+
+  .topic {
+    font-family: 'LcdSolid';
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #FF7400;
+  }
+
+  .title {
+    font-size: 56px;
+    font-weight: 700;
+    font-family: 'Urbanist';
+    color: #FFFFFF;
+  }
+
+  .sub-title {
+    font-size: 18px;
+    font-family: 'Outfit';
+    color: #949494;
+  }
+}
+
+.service-offered {
+  .active {
+    background: linear-gradient(90deg, #FF7400, #FF9A00);
+    ;
+  }
+
+  .container {
+    .card {
+      background-color: #141414;
+      border-radius: 24px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+
+      .title {
+        font-family: 'LcdSolid';
+        font-weight: 400;
+        font-size: 24px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+      }
+
+      .sub-title {
+        font-weight: 400;
+        font-size: 16px;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.footer {
+  background: #FCF6EF;
+
+  .copy-right {
+    margin: 0 auto;
+
+    .text {
+      font-family: 'LcdSolid';
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: capitalize;
+      color: #0D0B00;
+    }
+
+    .options {
+      font-family: 'Outfit';
+      font-weight: 400;
+      font-size: 14px;
+      text-decoration: underline;
+      cursor: pointer;
+      color: #0D0B00;
+    }
+  }
+}
