@@ -93,11 +93,7 @@ const serviceIconHover = {
   transition: { duration: 0.3, ease: "easeOut" }
 }
 
-const buttonHover = {
-  scale: 1.05,
-  boxShadow: "0 12px 35px rgba(255, 116, 0, 0.35)",
-  transition: { duration: 0.3 }
-}
+
 
 const glowPulse = {
   scale: [1, 1.05, 1],
@@ -216,9 +212,9 @@ function App() {
               </motion.a>
             ))}
           </motion.nav>
-          <motion.div whileHover={buttonHover} whileTap={{ scale: 0.97 }}>
+          <div>
             <Button className="global-button">Contact Us</Button>
-          </motion.div>
+          </div>
         </motion.div>
 
         <div className='flex flex-col md:flex-row items-center justify-between px-20 py-8 relative'>
@@ -256,8 +252,6 @@ function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              whileHover={buttonHover}
-              whileTap={{ scale: 0.97 }}
             >
               <Button className="global-button">Start your project</Button>
             </motion.div>
@@ -364,9 +358,9 @@ function App() {
             <p className='pb-[40px]'>
               At Mach-A, we're more than service providers—we're your growth partners, committed to helping you innovate, scale, and succeed.
             </p>
-            <motion.div whileHover={buttonHover} whileTap={{ scale: 0.97 }}>
+            <div>
               <Button className="global-button">Learn More</Button>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
 
@@ -603,7 +597,7 @@ function App() {
             className="cta-buttons"
             variants={staggerContainer}
           >
-            <motion.div variants={scaleIn} whileHover={buttonHover} whileTap={{ scale: 0.97 }}>
+            <motion.div variants={scaleIn}>
               <Button className="global-button cta-primary-btn">Start Your Project</Button>
             </motion.div>
             <motion.div variants={scaleIn} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>

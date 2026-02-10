@@ -2,8 +2,9 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
 :root {
-  font-family: Outfit,sans-serif;
+  font-family: Outfit, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -124,18 +125,40 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
-.global-button{
+.global-button {
   font-family: 'LcdSolid';
   text-transform: capitalize;
-  background: linear-gradient(90deg, #FF7400, #FF9A00);
+  background: linear-gradient(90deg, #FF7400, #FF9A00, #FF7400);
+  background-size: 200% 100%;
+  animation: gradientSlide 3s ease-in-out infinite;
   color: #FFFFFF;
   font-weight: 400;
   font-size: 16px;
-  box-shadow: 0 1 2 0 #0D0B000D;
+  box-shadow: 0 2px 8px rgba(255, 116, 0, 0.3);
   padding: 12px 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.global-button:hover {
+  box-shadow: 0 4px 20px rgba(255, 116, 0, 0.45);
+}
+
+@keyframes gradientSlide {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
