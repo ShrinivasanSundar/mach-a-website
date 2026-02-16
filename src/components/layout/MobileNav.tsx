@@ -5,7 +5,7 @@ import { categoryIcons } from '@/lib/serviceIcons';
 import { Button } from '@/components/ui/button';
 import { socialLinks } from '@/lib/constants';
 import { mainNavItems, serviceCategories } from '@/lib/serviceData';
-import Logo from '@/assets/Logo.svg';
+import Logo from '@/assets/mach-alogo.png';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 

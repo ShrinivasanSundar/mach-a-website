@@ -1,7 +1,7 @@
 import './Footer.scss';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router';
-import Logo from '@/assets/Logo.svg';
+import Logo from '@/assets/mach-alogo.png';
 import { socialLinks } from '@/lib/constants';
 import { serviceCategories } from '@/lib/serviceData';
 import { fadeInUp, staggerContainer, scaleIn, iconHover } from '@/lib/animations';
@@ -31,7 +31,7 @@ export default function Footer() {
               alt="Mach-A"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="cursor-pointer"
+              className="footer-logo cursor-pointer"
             />
           </Link>
           <p className="footer-tagline">Empowering growth through technology.</p>
@@ -99,7 +99,7 @@ export default function Footer() {
             </motion.nav>
             <div className="footer-contact-info">
               <a href="mailto:hello@mach-a.com" className="footer-link">hello@mach-a.com</a>
-              <a href="tel:+1234567890" className="footer-link">+1 (234) 567-890</a>
+              <a href="tel:+1234567890" className="footer-link">+91 7708788010</a>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import './Header.scss';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
-import Logo from '@/assets/Logo.svg';
+import Logo from '@/assets/mach-alogo.png';
 import { Button } from '@/components/ui/button';
 import { mainNavItems, serviceCategories } from '@/lib/serviceData';
 import { staggerContainer, fadeInUp } from '@/lib/animations';
@@ -49,7 +49,7 @@ export default function Header() {
             alt="Mach-A"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            className="cursor-pointer"
+            className="header-logo cursor-pointer"
           />
         </Link>
 

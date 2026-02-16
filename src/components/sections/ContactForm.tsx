@@ -89,14 +89,14 @@ export default function ContactForm() {
             <Phone className="contact-detail-icon" aria-hidden="true" />
             <div>
               <p className="detail-label">Phone</p>
-              <a href="tel:+1234567890" className="detail-value">+1 (234) 567-890</a>
+              <a href="tel:+1234567890" className="detail-value">+91 7708788010</a>
             </div>
           </div>
           <div className="contact-detail-item">
             <MapPin className="contact-detail-icon" aria-hidden="true" />
             <div>
               <p className="detail-label">Office</p>
-              <p className="detail-value">Remote-First Company</p>
+              <p className="detail-value">Coimbatore,India</p>
             </div>
           </div>
         </div>
