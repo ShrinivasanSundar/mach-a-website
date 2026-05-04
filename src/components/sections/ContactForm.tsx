@@ -109,6 +109,7 @@ export default function ContactForm() {
               <a href="tel:+918838325070" className="detail-value">+91 8838325070</a>
             </div>
           </div>
+          
           <div className="contact-detail-item">
             <MapPin className="contact-detail-icon" aria-hidden="true" />
             <div>
