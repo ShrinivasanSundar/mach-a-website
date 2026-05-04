@@ -1,7 +1,6 @@
 import './ContactPage.scss';
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
 import Layout from '@/components/layout/Layout';
 import PageHero from '@/components/shared/PageHero';
 import { Button } from '@/components/ui/button';
@@ -9,9 +8,9 @@ import { serviceCategories } from '@/lib/serviceData';
 import { fadeInLeft, fadeInRight, staggerContainer } from '@/lib/animations';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+// Replace with your CallMeBot API key (get it free from https://www.callmebot.com/blog/free-api-whatsapp-messages/)
+const WHATSAPP_NUMBER = '918838325070';
+const CALLMEBOT_API_KEY = 'YOUR_CALLMEBOT_API_KEY';
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
@@ -42,7 +41,26 @@ export default function ContactPage() {
 
     setStatus('sending');
     try {
-      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, EMAILJS_PUBLIC_KEY);
+      const data = new FormData(formRef.current);
+      const name = data.get('name')?.toString().trim() || '';
+      const email = data.get('email')?.toString().trim() || '';
+      const company = data.get('company')?.toString().trim() || '';
+      const service = data.get('service')?.toString().trim() || '';
+      const message = data.get('message')?.toString().trim() || '';
+
+      const waMessage = encodeURIComponent(
+        `New Enquiry from Mach-A Website\n\n` +
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        (company ? `Company: ${company}\n` : '') +
+        (service ? `Service: ${service}\n` : '') +
+        `Message: ${message}`
+      );
+
+      await fetch(
+        `https://api.callmebot.com/whatsapp.php?phone=${WHATSAPP_NUMBER}&text=${waMessage}&apikey=${CALLMEBOT_API_KEY}`
+      );
+
       setStatus('success');
       formRef.current.reset();
       setTimeout(() => setStatus('idle'), 5000);
@@ -93,7 +111,7 @@ export default function ContactPage() {
               <Phone className="contact-page-icon" aria-hidden="true" />
               <div>
                 <p className="detail-label">Phone</p>
-                <a href="tel:+1234567890" className="detail-value">+91 7708788010</a>
+                <a href="tel:+918838325070" className="detail-value">+91 8838325070</a>
               </div>
             </div>
             <div className="contact-page-detail">

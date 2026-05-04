@@ -389,5 +389,6 @@ export const mainNavItems: NavItemWithChildren[] = [
     ),
   },
   { label: 'Careers', href: '/careers' },
+  { label: 'TN Election 2026', href: '/tnresult2026' },
   { label: 'Contact', href: '/contact' },
 ];

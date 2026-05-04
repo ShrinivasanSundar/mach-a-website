@@ -5,6 +5,7 @@ import AboutPage from '@/pages/AboutPage';
 import CareersPage from '@/pages/CareersPage';
 import ContactPage from '@/pages/ContactPage';
 import ServiceDetailPage from '@/pages/ServiceDetailPage';
+import TNElectionPage from '@/pages/TNElectionPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/services/:slug" element={<ServiceDetailPage />} />
 
         <Route path="/careers" element={<CareersPage />} />
+        <Route path="/tnresult2026" element={<TNElectionPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>

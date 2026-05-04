@@ -1,5 +1,9 @@
 {
   "rewrites": [
+    {
+      "source": "/tnresult2026/:path*",
+      "destination": "https://people-connect-pro.vercel.app/tnresult2026/:path*"
+    },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
